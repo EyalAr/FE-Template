@@ -14,3 +14,4 @@ Run tests with `npm run test`.
 - React.js for components and UI interactions.
 - ES6 for modules and other goodies.
 - Webpack + Babel as the build system.
+- Mocha + Enzyme for UI testing.

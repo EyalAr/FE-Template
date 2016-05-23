@@ -1,4 +1,4 @@
 import "babel-polyfill";
 import App from "./app";
 
-App(document.getElementById("container"));
+ReactDOM.render(<App/>, document.getElementById("container"));

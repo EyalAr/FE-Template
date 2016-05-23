@@ -4,7 +4,7 @@
   "description": "Template FE Project",
   "main": "app/index.html",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --opts test/mocha.opts test",
+    "test": "./node_modules/.bin/mocha --opts test/mocha.opts test/app/**/*.js",
     "build": "./node_modules/.bin/webpack -p"
   },
   "author": "Eyal Arubas <eyalarubas@gmail.com>",
