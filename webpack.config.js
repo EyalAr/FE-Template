@@ -11,6 +11,10 @@ module.exports = {
       loader: "babel-loader"
     }, {
       test: /\.css$/,
+      loader: "style-loader!css-loader?modules",
+      exclude: [/flexboxgrid/, /material-design-icons/]
+    }, {
+      test: [/flexboxgrid\.css$/, /material-design-icons.*\.css$/],
       loader: "style-loader!css-loader"
     }, {
       test: /\.(png|woff|woff2|eot|ttf|svg).*$/,
