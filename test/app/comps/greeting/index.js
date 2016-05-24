@@ -1,19 +1,22 @@
 import React from "react";
 import { shallow } from "enzyme";
 import should from "should";
-
+import CircularProgress from "material-ui/CircularProgress";
+import FontIcon from "material-ui/FontIcon";
 import Greeting from "../../../../app/comps/greeting";
 
 describe("<Greeting />", () => {
 
-    it("should display 'Please Wait...' when ready=false", () => {
+    it("should display only a circular progress", () => {
         const wrapper = shallow(<Greeting ready={false} />);
-        wrapper.render().text().should.equal("Please wait...");
+        wrapper.find(CircularProgress).should.have.length(1);
+        wrapper.find(FontIcon).should.have.length(0);
     });
 
-    it("should display 'Ready, hello' when ready=true", () => {
+    it("should display only an icon", () => {
         const wrapper = shallow(<Greeting ready={true} />);
-        wrapper.render().text().should.equal("Ready, hello");
+        wrapper.find(FontIcon).should.have.length(1);
+        wrapper.find(CircularProgress).should.have.length(0);
     });
 
 });
